@@ -1,5 +1,5 @@
 const frase = ("Você estar na patente: ")
-let numeroDeVitorias = 45
+let numeroDeVitorias = 0
 let numeroDeDerrotas = 0
 validarVitorias(numeroDeVitorias, numeroDeDerrotas)
 
