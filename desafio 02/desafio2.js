@@ -1,42 +1,39 @@
 const frase = ("Você estar na patente: ")
 let numeroDeVitorias = 45
 let numeroDeDerrotas = 0
-
 validarVitorias(numeroDeVitorias, numeroDeDerrotas)
-validarPatentes(numeroDeVitorias, numeroDeDerrotas)
 
-
-// Função para Validar as Vitorias e as Derrotas, e dizer a quantidade para o "jogador"
+// Função para Validar as Vitorias e as Derrotas, e dizer a quantidade para o "jogador" e avaliar a Patente
 function validarVitorias(vitoria, derrota){
     numeroDeDeV = vitoria - derrota
     numeroDeDeV = Math.abs(numeroDeDeV)
     if (derrota>vitoria){
-        console.log("Infelizmente você tem muitas Derrotas: " + derrota + " Derrotas. Você tem " + vitoria + "De vitorias")
+        com1 = ("Infelizmente você tem muitas Derrotas: " + derrota + " Derrotas. Você tem " + vitoria + "De vitorias")
     }else if (derrota<vitoria){
-        console.log("Parabens você tem "+ vitoria +" Vitorias é " + derrota + (" Derrotas"))
+        com1 = ("Parabens você tem "+ vitoria +" Vitorias é " + derrota + (" Derrotas"))
     }else{
-        console.log("Você não tem Vitorias e nem Derrotas. "+ numeroDeDeV)
+        com1 = ("Você não tem Vitorias e nem Derrotas. "+ numeroDeDeV)
     }
-}
 
-// Função para Validar a Patente do "jogador"
-function validarPatentes(vitoria, derrota){
+
+// Variavel para Validar a Patente do "jogador"
     numeroParaPatente = vitoria - derrota
     if (numeroParaPatente <=10){
-        console.log(frase + 'Ferro')
+        com2 = (frase + 'Ferro')
     }else if ((numeroParaPatente>=11) && (numeroParaPatente <=20)){
-        console,log(frase + 'Bronze')
+        com2 = (frase + 'Bronze')
     }else if ((numeroParaPatente>=21) && (numeroParaPatente<=50)){
-        console.log(frase + 'Prata')
+        com2 = (frase + 'Prata')
     }else if ((numeroParaPatente>=51) && (numeroParaPatente<=80)){
-        console.log(frase + 'Ouro')
+        com2 = (frase + 'Ouro')
     }else if ((numeroParaPatente>=81) && (numeroParaPatente<=90)){
-        console.log(frase + 'Diamante')
+        com2 = (frase + 'Diamante')
     }else if ((numeroParaPatente>=91) && (numeroParaPatente<=100)){
-        console.log(frase + 'Lendario')
+        com2 = (frase + 'Lendario')
     }else if (numeroParaPatente>=101){
-        console.log(frase + 'Imortal')
+        com2 = (frase + 'Imortal')
     }else{
-        console.log('Nenhuma patente')
+        com2 = ('Nenhuma patente')
     }
+    console.log(com1 + "; " +com2)
 }
