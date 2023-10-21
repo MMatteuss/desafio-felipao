@@ -14,9 +14,7 @@ function validarVitorias(vitoria, derrota){
     }else{
         com1 = ("Você não tem Vitorias e nem Derrotas. "+ numeroDeDeV)
     }
-
-
-// Variavel para Validar a Patente do "jogador"
+    // Variavel para Validar a Patente do "jogador"
     numeroParaPatente = vitoria - derrota
     if (numeroParaPatente <=10){
         com2 = (frase + 'Ferro')
